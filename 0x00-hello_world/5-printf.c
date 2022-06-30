@@ -1,13 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-#define int char
 
 int main(void)
 {
-    int i;
-
-    i = 5;
-    printf ("sizeof(i) = %lu", sizeof(i));
-    return (EXIT_SUCCESS);
+    printf("with proper grammar, but the outcome is a piece of art,\n);
+    return (o);
 }
