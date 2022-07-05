@@ -1,7 +1,7 @@
-#include "_purchar.h"
+#include "main.h"
 
 /**
- * main - Prints "_Putchar" followed by a new loine.
+ * main - prints putchar followed by a new loine.
  *
  * Return: Always 0.
  */
