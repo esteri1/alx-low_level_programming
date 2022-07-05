@@ -1,14 +1,34 @@
-#include "libioP.h"
-#include "stdio.h"
+#include <stdio.h>
 
-#undef putchar
-
-int
-putchar (int c)
+/**
+ * main - Prints all possible combinations of two two-digit numbers,
+ *        ranging from 0-99, separated by a comma followed by a space.
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-  int result;
-  _IO_acquire_lock (_IO_stdout);
-  result = _IO_putc_unlocked (c, _IO_stdout);
-  _IO_release_lock (_IO_stdout);
-  return result;
+	int num1, num2;
+
+	for (num1 = 0; num1 <= 98; num1++)
+	{
+		for (num2 = num1 + 1; num2 <= 99; num2++)
+		{
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
+
+			if (num1 == 98 && num2 == 99)
+				continue;
+
+			putchar(',');
+			putchar(' ');
+		}
+	}
+
+	putchar('\n');
+
+	return (0);
 }
