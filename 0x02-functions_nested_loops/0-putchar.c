@@ -1,13 +1,14 @@
-#include <unistd.h>
+#include "libioP.h"
+#include "stdio.h"
 
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
+#undef putchar
+
+int
+putchar (int c)
 {
-	return (write(1, &c, 1));
+  int result;
+  _IO_acquire_lock (_IO_stdout);
+  result = _IO_putc_unlocked (c, _IO_stdout);
+  _IO_release_lock (_IO_stdout);
+  return result;
 }
