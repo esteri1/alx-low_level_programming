@@ -1,19 +1,21 @@
-#include "main.h"
+#include "_purchar.h"
 
 /**
- * main - Prints all single digit numbers of base 10 starting from 0,
- *        only using putchar and without char variables.
+ * main - Prints "_Putchar" followed by a new loine.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-	int num;
-
-	for (num = 0; num < 10; num++)
-		putchar((num % 10) + '0');
-
-	putchar('\n');
+	_putchar('_');
+	_putchar('P');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 
 	return (0);
 }
