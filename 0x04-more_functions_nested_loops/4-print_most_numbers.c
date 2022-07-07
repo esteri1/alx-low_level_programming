@@ -3,21 +3,24 @@
 /**
  * print_most_numbers -  checks for checks for a digit (0 through 9).
  *
+ * Description: Prints the numbers excluding 2 and 4
+ *
  * Return: Always 0.
  */
 void print_most_numbers(void)
 {
-	int a;
+	int x = 0;
 
-	for (a = 48; a < 58; a++)
+	for (; x <= 9; x++)
 	{
-		if (a != 50)
+		if (x == 2 || x == 4)
 		{
-			if (a != 52)
-			{
-			_putchar(a);
-			}
+			continue;
+		}
+		else
+			_putchar(x + '0');
 		}
 	}
+
 	_putchar('\n');
 }
