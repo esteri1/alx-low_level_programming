@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * malloc_checked - normal process termination with a status value of 98
+ * malloc_checked - allocate memory with malloc
  *
- * @b: allocated memory
- *
+ * @b: size to allocate
  * Return: a pointer to the allocated memory
  */
 void *malloc_checked(unsigned int b)
