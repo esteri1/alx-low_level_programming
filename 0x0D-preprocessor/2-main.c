@@ -1,6 +1,12 @@
-#ifndef _ABS_DEF
-#define _ABS_DEF
+#include <stdio.h>
 
-#define ABS(x) (x > 0 ? (x) : (x) * -1)
-
-#endif
+/**
+ * main - prints the name of the file
+ *
+ * Return: always 0
+ */
+int main(void)
+{
+	printf("%s\n", __FILE__);
+	return (0);
+}
